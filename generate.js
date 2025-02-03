@@ -6,7 +6,7 @@ const outputFolder = path.join(__dirname, 'pdfs');
 
 // Generate PDF from specific URL
 generatePDF(
-    'http://localhost:8000/export/property_assets/51',
+    'http://localhost:8000/export/cover/256',
     outputFolder
 )
     .then(pdfPath => console.log(`PDF saved at: ${pdfPath}`))

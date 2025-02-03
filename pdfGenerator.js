@@ -25,7 +25,7 @@ async function generatePDF(url, outputFolder) {
         await page.setViewport({
             width: 595,
             height: 842,
-            deviceScaleFactor: 1,
+            deviceScaleFactor: 4,
         });
 
 
@@ -35,12 +35,14 @@ async function generatePDF(url, outputFolder) {
             timeout: 30000
         });
 
+
         // Generate PDF with A4 format
         await page.pdf({
             path: outputPath,
             format: 'A4',
             printBackground: true,
-            preferCSSPageSize: true
+            preferCSSPageSize: true,
+            scale: 1.5
         });
 
         // Close the browser
